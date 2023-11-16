@@ -30,17 +30,17 @@ def password_checker(password):
 
 
 # TODO
-# add to github
+# Rename current method password_checker to be called dictionary_attack
+# Create a new function: called Brute Force.
+    # Inside this function use the characters = numbers, letters to crack 'password123'
+    # Do what you did in dictionary_attack with outputting time taken to crack a password.
+#Expand on your program to either do a dictionary/brute force attack. Hint: you can use args to do this ;)
 def main():
     print('Can you guess the most common password from the 2009 \'RockYou\' data leak?')
     password = input('Enter password Password:> ')
 
-    #print(f'Password is {}')
     password_checker(password)
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     main(),
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
