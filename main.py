@@ -33,7 +33,7 @@ def attack_sequencer(func):
 @attack_sequencer
 def dictionary_attack(password):
 
-    with open('rockyou.txt',encoding='latin1') as file:
+    with open('rockyou.zip',encoding='latin1') as file:
         lines = [line.strip('\n') for line in file]
         print(f'checking for your password against {len(lines)} entries')
 
@@ -43,8 +43,8 @@ def dictionary_attack(password):
             return
 
     else:
-        print(f'Password was not found in any of the {len(lines)} entries')
-        attack_selector(password)
+        print(f'Password was not found in any of the {len(lines)} entries \n ')
+        
 @attack_sequencer
 def brute_force(password):
     lowercase_chars = [chr(i) for i in range (ord('a'), ord('z')+1)]
