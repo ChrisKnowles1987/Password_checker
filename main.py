@@ -1,11 +1,6 @@
 
 import itertools
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import time
-
-import os
-print("Current Working Directory: ", os.getcwd())
 
 def attack_selector(password):
     print('Welcome to the dictionary / brute force attack simulator.  Select one of the following options:\n')
@@ -20,7 +15,6 @@ def attack_selector(password):
     else:
         print('not a valid entry, please select one of the following options')
         attack_selector(password)
-
 
 def attack_sequencer(func):
     def attack(password):
@@ -64,21 +58,12 @@ def brute_force(password):
                 return
 
 # TODO
-#user workflow - do dictionary first, if not found ask if they want to brute force or give up?
-#
 #time elapsed for brute forced as its running
-#clean terminal up so it displays rather than updates
-#Expand on your program to either do a dictionary/brute force attack. Hint: you can use args to do this ;)
 #how to point at doms server?
 def main():
     password = input('Enter password Password:> ')
 
-
     attack_selector(password)
-    # dictionary_attack(password)
-    # brute_force(password)
-
-
 
 if __name__ == '__main__':
     main(),
