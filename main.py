@@ -1,8 +1,11 @@
-# This is a sample Python script.
+
 import itertools
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import time
+
+import os
+print("Current Working Directory: ", os.getcwd())
 
 def attack_selector(password):
     print('Welcome to the dictionary / brute force attack simulator.  Select one of the following options:\n')
@@ -33,7 +36,7 @@ def attack_sequencer(func):
 @attack_sequencer
 def dictionary_attack(password):
 
-    with open('rockyou.zip',encoding='latin1') as file:
+    with open('rockyou.txt',encoding='latin1') as file:
         lines = [line.strip('\n') for line in file]
         print(f'checking for your password against {len(lines)} entries')
 
